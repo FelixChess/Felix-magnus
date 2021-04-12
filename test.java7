@@ -1,0 +1,31 @@
+public class Test
+{
+    public static void sleep(int sleepForMs) {
+        try
+        {
+            Thread.sleep(sleepForMs);
+        }
+        catch( Throwable error )
+        {
+        }
+    }
+    public static void main (String[] args)
+    {
+        String b = ("-stop the count");
+        double c = 1;
+        double x = 3.3;
+        double y = 6.7;
+        double a = 1;
+        while (a < y + x)
+        {
+            System.out.println(a);
+            a = a + c;
+            Test.sleep(1000);
+            if (a == y + x) 
+            {
+                Test.sleep(60);
+                System.out.println(a + b);
+            }
+        }
+    }
+}
